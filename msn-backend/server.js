@@ -27,7 +27,7 @@ app.use('/api/news', NewsRoutes)
 const Server_start = async ()=>{
     try{
         await Db();
-        app.listen(PORT, ()=> console.log(`Server Running on Port ${PORT}`))
+        app.listen(PORT, ()=> console.log(`Server is Running on Port ${PORT}`))
 
     }
     catch(e){
