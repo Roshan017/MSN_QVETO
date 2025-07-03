@@ -4,7 +4,7 @@ const NewsList = () => {
 
   return (
     <div>
-      <h2>News Articles</h2>
+      <h2>News LIst</h2>
       
     </div>
   );
