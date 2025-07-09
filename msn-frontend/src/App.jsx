@@ -1,14 +1,16 @@
-import NewsList from "./components/NewsList"
 
+import './App.css'
+import NewsList from './components/NewsList';
 
 function App() {
-  return(
-    <div>
-      <h1>MSN CLone</h1>
+  
+
+  return (
+    <div className=" flex flex-col min-h-screen flex items-center justify-center bg-gray-100">
+      <h1 className="text-4xl font-bold text-blue-600">MSN NEWS APP</h1>
       <NewsList/>
     </div>
-  )
-
+  );
 }
 
 export default App
