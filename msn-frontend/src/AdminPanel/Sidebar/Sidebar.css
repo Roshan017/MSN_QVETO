@@ -1,0 +1,34 @@
+.Sidemen{
+    background-color: #5b637a44;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+}
+
+.Sideb{
+    padding: 6px;;
+}
+
+.user svg{
+    font-size: 75px;
+    margin: 40px 0px 20px;
+}
+
+.menu{
+    margin: 3px 10px;
+    padding: 12px 12px;
+    width: 85%;
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    border-radius: 5px;
+}
+
+.menu svg {
+    margin-right: 8px;
+}
+
+.menu:hover{
+    background-color: #383e49;
+    color: #f2f4f4;
+}
