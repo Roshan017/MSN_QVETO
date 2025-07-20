@@ -3,7 +3,9 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const Db = require('./config/db')
 
-const NewsRoutes = require('./routes/newsRoutes')
+const newsRoutes = require("./routes/news");
+app.use("/api/news", newsRoutes);
+
 
 dotenv.config();
 const PORT = 5000;
