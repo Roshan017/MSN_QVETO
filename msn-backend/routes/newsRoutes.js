@@ -4,6 +4,7 @@ const router = express.Router();
 const News = require('../models/News');
 const { model } = require('mongoose');
 
+<Route path="/admin-dashboard/add-news" element={<AddNewsForm />} />
 //Add news to DB
 router.post('/', async(req, res)=>{
     try{
