@@ -8,7 +8,8 @@ const { model } = require('mongoose');
 //Add news to DB
 router.post('/', async(req, res)=>{
     try{
-            const news = new News(req.body)
+        const { title, category, content, image, date } = req.body;
+    const newNews = new News({ title, category, content, image, date });
 
             await news.save();
             console.log("Added to DB")
@@ -16,7 +17,7 @@ router.post('/', async(req, res)=>{
 
     }
     catch(e){
-        res.status(400).json({e: e.message})
+        res.status(500).json({e: e.message})
 
     }
 })
