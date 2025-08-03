@@ -95,7 +95,7 @@ const AdminDashboard = () => {
         {activePage === '/admin-dashboard/news' && <News/>}
         {activePage === '/admin-dashboard/add-news' && <AddNews />}
         {/* Render other pages if implemented */}
-        {(activePage === '/admin-dashboard/add-news' && <AddNews /> || activePage === '/admin-dashboard/categories' || activePage === '/admin-dashboard/users' || activePage === '/admin-dashboard/settings') && (
+        {(activePage === '/admin-dashboard/categories' || activePage === '/admin-dashboard/users' || activePage === '/admin-dashboard/settings') && (
           <div className="p-8 flex-grow flex items-center justify-center text-gray-500 text-2xl">
             {activePage.charAt(0).toUpperCase() + activePage.slice(1)} Page Coming Soon!
           </div>

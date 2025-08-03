@@ -6,4 +6,6 @@ const API = axios.create({
 
 export const fetchNews = ()=> API.get('/news');
 
-export const postNews = (data)=>API.post('/news', data)
+export const postNews = (data)=>API.post('/news', data);
+
+export const deleteNews = (id) => API.delete(`/news/${id}`);
