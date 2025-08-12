@@ -22,10 +22,7 @@ function App() {
 
         {/*AdminSide*/}
         <Route path='/admin-dashboard' element={<AdminDashboard/>}>
-          <Route index element={<Dashboard/>} />
-          <Route path='/admin-dashboard/news' element={<News/>} />
-          <Route path='/admin-dashboard/add-news' element={<AddNews/>} />
-          <Route path='/admin-dashboard/categpries' element={<Categories/>} />
+        
         </Route>
       </Routes>
     </BrowserRouter>

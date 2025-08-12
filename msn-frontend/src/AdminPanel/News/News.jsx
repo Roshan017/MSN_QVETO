@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { fetchNews, deleteNews } from '../../api/newsApi';
 import {
   Newspaper,
   Search,
   Edit,
   Trash2
 } from 'lucide-react';
-
-// Optionally set axios baseURL if backend runs on a different port
-axios.defaults.baseURL = 'http://localhost:5000'; // Set this to your backend URL and port
 
 const News = () => {
   const [articles, setArticles] = useState([]);
@@ -23,10 +20,8 @@ const News = () => {
       setMessage('');
       setMessageType('');
       try {
-        const response = await axios.get('/api/news', {
-          params: searchTerm ? { q: searchTerm } : {}
-        });
-        // Defensive: ensure response.data is an array
+        const response = await fetchNews(searchTerm);
+        console.log('Fetched news data:', response.data); // Debug log
         if (Array.isArray(response.data)) {
           setArticles(response.data);
         } else if (Array.isArray(response.data.articles)) {
@@ -56,7 +51,7 @@ const News = () => {
     setMessage('');
     setMessageType('');
     try {
-      await axios.delete(`/api/news/${id}`);
+      await deleteNews(id);
       setArticles(articles.filter(article => article._id !== id));
       setMessage('Article deleted successfully!');
       setMessageType('success');
