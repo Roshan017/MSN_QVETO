@@ -37,49 +37,13 @@ const mockApi = {
           ],
         });
       }, 500);
-    });
-  },
-
-  fetchNewsArticles: async (query = '') => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        const allArticles = [
-          { id: '1', title: 'Government Announces New Policy', category: 'Politics', status: 'Published', date: 'May 85', icon: <Megaphone size={16} /> },
-          { id: '2', title: 'Sports Event Draws Large Crowd', category: 'Sports', status: 'Published', date: 'Draft 35', icon: <Star size={16} /> },
-          { id: '3', title: 'Breakthrough in Cancer Research', category: 'Health', status: 'Published', date: 'Jan. 23', icon: <HeartPulse size={16} /> },
-          { id: '4', title: 'Stock Market Hits Record High', category: 'Business', status: 'Published', date: 'Feb. 23', icon: <Briefcase size={16} /> },
-          { id: '5', title: 'Local Art Exhibition Opens', category: 'Entertainment', status: 'Draft', date: 'Feb. 23', icon: <Palette size={16} /> },
-          { id: '6', title: 'Advancements in Renewable Energy', category: 'Science', status: 'Published', date: 'Apr. 23', icon: <FlaskConical size={16} /> },
-          { id: '7', title: 'New Book Release Dominates Charts', category: 'Entertainment', status: 'Published', date: 'Jun. 10', icon: <BookOpen size={16} /> },
-          { id: '8', title: 'Tech Giant Unveils New Gadget', category: 'Technology', status: 'Draft', date: 'Jul. 01', icon: <Tag size={16} /> },
-        ];
-        const filteredArticles = allArticles.filter(article =>
-          article.title.toLowerCase().includes(query.toLowerCase()) ||
-          article.category.toLowerCase().includes(query.toLowerCase())
-        );
-        resolve(filteredArticles);
-      }, 700);
-    });
-  },
-
-  submitNewsArticle: async (articleData) => {
-    return new Promise(resolve => {
-      setTimeout(() => {
-        console.log('Submitting article:', articleData);
-        // In a real app, you'd send this to your backend
-        resolve({ success: true, message: 'Article added successfully!' });
-      }, 1000);
-    });
+    })
   }
 };
 
 const Dashboard = () => {
   const [stats, setStats] = useState({ totalNews: 0, published: 0, draft: 0, recentActivity: [] });
-  const [loading, setLoading] = useState(true);
-
-  const [chartData, setChartData] = useState([]);
-  // State to manage the selected time range: 'month' or 'week'
-  const [selectedTimeRange, setSelectedTimeRange] = useState('month');
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -140,7 +104,7 @@ const Dashboard = () => {
             <button className="px-4 py-2 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-100">1M</button>
           </div>
         </div>
-        {/* Placeholder for chart - in a real app, you'd use a charting library like Recharts */}
+        {/* Placeholder for chart */}
         <div className="h-64 bg-gray-50 rounded-xl flex items-center justify-center text-gray-400 text-sm">
           <BarChart3 size={48} className="text-gray-300 mr-2" />
           Activity Chart Placeholder
