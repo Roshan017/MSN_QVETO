@@ -9,6 +9,7 @@ import News from './AdminPanel/News/News';
 import AddNews from './AdminPanel/AddNews/AddNews';
 import Categories from './AdminPanel/Categories/Categories';
 import NewsCard from "./components/NewsCard";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -80,6 +81,9 @@ function App() {
           author="By Entertainment Desk"
           date="07 July 2025"
         />
+      </div>
+      <div>
+        <Footer /> {}
       </div>
     </div>
     </>
