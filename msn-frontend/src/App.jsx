@@ -9,6 +9,7 @@ import News from "./AdminPanel/News/News";
 import AddNews from "./AdminPanel/AddNews/AddNews";
 import Categories from "./AdminPanel/Categories/Categories";
 import NewsCard from "./components/NewsCard";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -37,11 +38,6 @@ function App() {
         <h1 className="text-4xl font-bold text-blue-600">MSN NEWS APP</h1>
         <NewsList />
         <TrendingNews />
-        {/* <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<NewsList />} />
-          </Routes>
-        </BrowserRouter> */}
         <div className="max-w-7xl mx-auto cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 w-full justify-around ">
           <NewsCard
             img="https://www.informalnewz.com/wp-content/uploads/2024/09/Heavy-Rains-Update.jpg"
