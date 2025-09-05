@@ -18,7 +18,7 @@ import {
 } from 'lucide-react'
 
 const AdminDashboard = () => {
-  const [activePage, setActivePage] = useState('/admin-dashboard/dashboard'); // Default active page
+  const [activePage, setActivePage] = useState('/admin-dashboard/news'); // Default active page
 
   return (
     <div className="min-h-screen bg-gray-100 font-inter antialiased flex">
