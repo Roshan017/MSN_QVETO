@@ -21,6 +21,8 @@ function NewsList() {
   if (loading) return <div>Loading...</div>;
 
   return (
+    <div className=" flex flex-col min-h-screen items-center justify-center bg-gray-100 ">
+      <h1 className="text-4xl font-bold text-blue-600">MSN NEWS APP</h1>
     <div className="news-list grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full m-2">
       {news.map((item) => (
         <NewsCard
@@ -33,6 +35,7 @@ function NewsList() {
           date={item.date}
         />
       ))}
+    </div>
     </div>
   );
 }
