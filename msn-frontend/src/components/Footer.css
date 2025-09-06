@@ -1,47 +1,44 @@
-   /* src/components/Footer.css */
+.footer {
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
-   .footer {
-       background-color: #2b2b2b;
-       color: white;
-       text-align: center;
-       position: fixed;
-       bottom: 0;
-       width: 100%;
-   }
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-   .footer-content {
-       max-width: 1200px;
-       margin: 0 auto;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-   }
+.social-links,
+.quick-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
 
-   .social-links,
-   .quick-links {
-       list-style: none;
-       padding: 0;
-       display: flex;
-   }
+.social-links li,
+.quick-links li {
+    margin: 0 15px;
+}
 
-   .social-links li,
-   .quick-links li {
-       /* display: inline; */
-       margin: 0 15px;
-   }
+.social-links a,
+.quick-links a {
+    color: white;
+    text-decoration: none;
+}
 
-   .social-links a,
-   .quick-links a {
-       color: white;
-       text-decoration: none;
-   }
-
-   .social-links a:hover,
-   .quick-links a:hover {
-       text-decoration: underline;
-   }
+.social-links a:hover,
+.quick-links a:hover {
+    text-decoration: underline;
+}
    
-   @media (max-width: 500px) {
+@media (max-width: 500px) {
     .footer-content {
         flex-direction: column;
         align-items: center; 
